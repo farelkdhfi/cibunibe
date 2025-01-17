@@ -351,9 +351,9 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                             <img class="logo" src="${logoDataUrl}">
                             <div class="teksHeader">
                                 <h1>PEMERINTAH DAERAH KABUPATEN TASIKMALAYA</h1>
-                                <h1>KECAMATAN KARANGJAYA</h1>
-                                <h1>DESA KARANGLAYUNG</h1>
-                                <p>Jln Nagaratengah Nomor Kode Pos 46199</p>
+                                <h1>KECAMATAN PANCATENGAH</h1>
+                                <h1>DESA CIBUNIASIH</h1>
+                                <p>Jln Nagaratengah Nomor Kode Pos 46194</p>
                             </div>
                         </div>
                         <hr>
@@ -366,7 +366,7 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                         </div>
                         <br>
 
-                        <p>Yang bertanda tangan di bawah ini, Kepala Desa Karanglayung, Kecamatan Karangjaya, Kabupaten Tasikmalaya,
+                        <p>Yang bertanda tangan di bawah ini, Kepala Desa Cibuniasih, Kecamatan Pancatengah, Kabupaten Tasikmalaya,
                             menerangkan bahwa:</p>
                         <table>
                             <tr>
@@ -423,10 +423,10 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                             sebagaimana mestinya.</p>
                         <br>
                         <div class="signature">
-                            <p>Karanglayung, ${new Date().toLocaleDateString()}</p>
-                            <p style="margin-top: -20px;">Kepala Desa Karanglayung</p>
+                            <p>Cibuniasih, ${new Date().toLocaleDateString()}</p>
+                            <p style="margin-top: -20px;">Kepala Desa Cibuniasih</p>
                             <br><br><br>
-                            <p><b style="text-decoration: underline;">EPEN RUSWANDI, S.Ag</b></p>
+                            <p><b style="text-decoration: underline;">H. Anwar</b></p>
                         </div>
 
                     </body>
@@ -555,9 +555,9 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                         <img class="logo" src="${logoDataUrl}">
                         <div class="teksHeader">
                             <h1>PEMERINTAH DAERAH KABUPATEN TASIKMALAYA</h1>
-                            <h1>KECAMATAN KARANGJAYA</h1>
-                            <h1>DESA KARANGLAYUNG</h1>
-                            <p>Jln Nagaratengah Nomor Kode Pos 46199</p>
+                            <h1>KECAMATAN PANCATENGAH</h1>
+                            <h1>DESA CIBUNIASIH</h1>
+                            <p>Jln Nagaratengah Nomor Kode Pos 46194</p>
                         </div>
                     </div>
                     <hr>
@@ -570,7 +570,7 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                     </div>
                     <br>
 
-                    <p>Yang bertanda tangan di bawah ini, Kepala Desa Karanglayung, Kecamatan Karangjaya, Kabupaten Tasikmalaya,
+                    <p>Yang bertanda tangan di bawah ini, Kepala Desa Cibuniasih, Kecamatan Pancatengah, Kabupaten Tasikmalaya,
                         menerangkan bahwa:</p>
                     <table>
                         <tr>
@@ -619,10 +619,10 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                         sebagaimana mestinya.</p>
                     <br>
                     <div class="signature">
-                        <p>Karanglayung, ${new Date().toLocaleDateString()}</p>
-                        <p style="margin-top: -20px;">Kepala Desa Karanglayung</p>
+                        <p>Cibuniasih, ${new Date().toLocaleDateString()}</p>
+                        <p style="margin-top: -20px;">Kepala Desa Cibuniasih</p>
                         <br><br><br>
-                        <p><b style="text-decoration: underline;">EPEN RUSWANDI, S.Ag</b></p>
+                        <p><b style="text-decoration: underline;">H. Anwar</b></p>
                     </div>
 
                 </body>
@@ -751,9 +751,9 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                         <img class="logo" src="${logoDataUrl}">
                         <div class="teksHeader">
                             <h1>PEMERINTAH DAERAH KABUPATEN TASIKMALAYA</h1>
-                            <h1>KECAMATAN KARANGJAYA</h1>
-                            <h1>DESA KARANGLAYUNG</h1>
-                            <p>Jln Nagaratengah Nomor Kode Pos 46199</p>
+                            <h1>KECAMATAN PANCATENGAH</h1>
+                            <h1>DESA CIBUNIASIH</h1>
+                            <p>Jln Nagaratengah Nomor Kode Pos 46194</p>
                         </div>
                     </div>
                     <hr>
@@ -766,7 +766,7 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                     </div>
                     <br>
 
-                    <p>Yang bertanda tangan di bawah ini, Kepala Desa Karanglayung, Kecamatan Karangjaya, Kabupaten Tasikmalaya,
+                    <p>Yang bertanda tangan di bawah ini, Kepala Desa Cibuniasih, Kecamatan Pancatengah, Kabupaten Tasikmalaya,
                         menerangkan bahwa:</p>
                     <table>
                         <tr>
@@ -793,10 +793,10 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                         sebagaimana mestinya.</p>
                     <br>
                     <div class="signature">
-                        <p>Karanglayung, ${new Date().toLocaleDateString()}</p>
-                        <p style="margin-top: -20px;">Kepala Desa Karanglayung</p>
+                        <p>Cibuniasih, ${new Date().toLocaleDateString()}</p>
+                        <p style="margin-top: -20px;">Kepala Desa Cibuniasih</p>
                         <br><br><br>
-                        <p><b style="text-decoration: underline;">EPEN RUSWANDI, S.Ag</b></p>
+                        <p><b style="text-decoration: underline;">H. Anwar</b></p>
                     </div>
 
                 </body>
@@ -932,9 +932,9 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                         <img class="logo" src="${logoDataUrl}">
                         <div class="teksHeader">
                             <h1>PEMERINTAH DAERAH KABUPATEN TASIKMALAYA</h1>
-                            <h1>KECAMATAN KARANGJAYA</h1>
-                            <h1>DESA KARANGLAYUNG</h1>
-                            <p>Jln Nagaratengah Nomor Kode Pos 46199</p>
+                            <h1>KECAMATAN PANCATENGAH</h1>
+                            <h1>DESA CIBUNIASIH</h1>
+                            <p>Jln Nagaratengah Nomor Kode Pos 46194</p>
                         </div>
                     </div>
                     <hr>
@@ -947,7 +947,7 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                     </div>
                     <br>
 
-                    <p>Yang bertanda tangan di bawah ini, Kepala Desa Karanglayung, Kecamatan Karangjaya, Kabupaten Tasikmalaya,
+                    <p>Yang bertanda tangan di bawah ini, Kepala Desa Cibuniasih, Kecamatan Pancatengah, Kabupaten Tasikmalaya,
                         menerangkan bahwa:</p>
                     <table>
                         <tr>
@@ -984,7 +984,7 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                         </tr>
                     </table>
 
-                    <p>Nama Orang tersebut diatas hasil validasi kami ke lapangan benar-benar TIDAK MAMPU, dan Surat Keterangan yang Kami maksud untuk keperluan Persyaratan Permohonan Bantuan Pengobatan.</p>
+                    <p>Nama Orang tersebut diatas hasil validasi kami ke lapangan benar-benar TIDAK MAMPU, dan Surat Keterangan yang Kami maksud untuk keperluan Persyaratan Permohonan Bantuan Perihal Ekonomi.</p>
 
                     <p>Demikian surat keterangan ini dibuat dengan sebenarnya agar yang berkepentingan mengetahuinya dan dapat digunakan
                         sebagaimana mestinya.</p>
@@ -992,15 +992,15 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                     <div class="signatures">
                         <div class="signature-box">
                             <p>Mengetahui,</p>
-                            <p style="margin-top: -20px;">Camat Karangjaya</p>
+                            <p style="margin-top: -20px;">Camat Pancatengah</p>
                             <br><br><br>
                             <p><b style="text-decoration: underline;"></b></p>
                         </div>
                         <div class="signature-box">
-                            <p>Karanglayung, ${new Date().toLocaleDateString()}</p>
-                            <p style="margin-top: -20px;">Kepala Desa Karanglayung</p>
+                            <p>Cibuniasih, ${new Date().toLocaleDateString()}</p>
+                            <p style="margin-top: -20px;">Kepala Desa Cibuniasih</p>
                             <br><br><br>
-                            <p><b style="text-decoration: underline;">EPEN RUSWANDI, S.Ag</b></p>
+                            <p><b style="text-decoration: underline;">H. Anwar</b></p>
                         </div>
                         <div class="signature-box">
                             <p>Disaksikan oleh,</p>

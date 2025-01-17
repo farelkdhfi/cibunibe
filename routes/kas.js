@@ -14,6 +14,7 @@ router.post("/add", authenticateToken, isAdmin, async (req, res) => {
         swadaya,
         pengusaha,
         bumdes,
+        pensiun
     } = req.body;
 
     try {
@@ -26,6 +27,7 @@ router.post("/add", authenticateToken, isAdmin, async (req, res) => {
             swadaya,
             pengusaha,
             bumdes,
+            pensiun
         });
 
         await newVisimisi.save();
@@ -73,7 +75,7 @@ router.delete("/:id", authenticateToken, isAdmin, async (req, res) => {
 
 // Update visi misi by ID
 router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
-    const { 
+    const {
         tanah,
         abodemen,
         pam,
@@ -81,7 +83,9 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
         portal,
         swadaya,
         pengusaha,
-        bumdes, } = req.body;
+        bumdes,
+        pensiun
+    } = req.body;
 
     try {
         const updatedVisimisi = await Kas.findByIdAndUpdate(
@@ -95,6 +99,7 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                 swadaya,
                 pengusaha,
                 bumdes,
+                pensiun
             },
             { new: true } // Return visi misi yang telah diperbarui
         );

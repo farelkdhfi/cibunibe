@@ -9,6 +9,7 @@ const kasSchema = new mongoose.Schema({
   portal: { type: String, required: true },
   pengusaha: { type: String, required: true },
   bumdes: { type: String, required: true },
+  pensiun: { type: String, required: true },
 },);
 
 module.exports = mongoose.model("Kas", kasSchema);

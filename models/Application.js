@@ -35,7 +35,6 @@ const applicationSchema = new mongoose.Schema({
    ketua: { type: String },
    tahunBerdiri: { 
      type: String, 
-     match: /^\d{4}$/ 
    },
    alamatLengkap: { type: String },
    noIdDtks: { type: String },

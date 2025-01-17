@@ -5,7 +5,7 @@ const router = express.Router();
 
 // Tambahkan visi misi
 router.post("/add", authenticateToken, isAdmin, async (req, res) => {
-    const { belumSekolah, tamatSd, tidakTamatSd, tamatSLTA, tamatPerguruanTinggi } = req.body;
+    const { belumSekolah, tamatSd, tidakTamatSd, tamatSLTA, tamatPerguruanTinggi, madrasah, majelis } = req.body;
 
     try {
         const newVisimisi = new Pendidikan({
@@ -13,7 +13,9 @@ router.post("/add", authenticateToken, isAdmin, async (req, res) => {
             tamatSd,
             tidakTamatSd,
             tamatSLTA,
-            tamatPerguruanTinggi
+            tamatPerguruanTinggi,
+            madrasah,
+            majelis
         });
 
         await newVisimisi.save();
@@ -72,7 +74,9 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                 tamatSd,
                 tamatPerguruanTinggi,
                 tamatSLTA,
-                tidakTamatSd
+                tidakTamatSd,
+                majelis,
+                madrasah
             },
             { new: true } // Return visi misi yang telah diperbarui
         );
