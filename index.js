@@ -23,7 +23,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 // Middleware CORS
-const allowedOrigins = ["http://localhost:5173", "https://your-production-domain.com"];
+const allowedOrigins = ["http://localhost:5173", "https://cibuniasih.vercel.app/"];
 app.use(cors({
     origin: (origin, callback) => {
         if (!origin || allowedOrigins.includes(origin)) {
