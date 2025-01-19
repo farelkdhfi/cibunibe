@@ -6,6 +6,7 @@ const router = express.Router();
 const puppeteer = require('puppeteer');
 const fs = require("fs");
 const path = require("path");
+const os = require("os");
 const { authenticateToken, isAdmin } = require("../middlewares/authMiddleware");
 
 // Submit Application
@@ -200,6 +201,41 @@ router.get("/", authenticateToken, isAdmin, async (req, res) => {
     }
 });
 
+// Fungsi untuk membuat PDF dan mengunggah ke Cloudinary
+async function generateAndUploadPDF(content, applicationId) {
+    try {
+        const tempDir = os.tmpdir(); // Direktori sementara
+        const pdfPath = path.join(tempDir, `${applicationId}.pdf`);
+
+        // Meluncurkan Puppeteer dengan opsi tambahan untuk Railway
+        const browser = await puppeteer.launch({
+            args: ["--no-sandbox", "--disable-setuid-sandbox"],
+        });
+        const page = await browser.newPage();
+        await page.setContent(content);
+        await page.pdf({ path: pdfPath, format: "A4", printBackground: true });
+        await browser.close();
+
+        // Unggah ke Cloudinary
+        const result = await cloudinary.uploader.upload(pdfPath, {
+            resource_type: "raw",
+            folder: "pdf_files",
+            use_filename: true,
+            unique_filename: false,
+            access_mode: "public",
+        });
+
+        // Hapus file lokal setelah diunggah
+        fs.unlinkSync(pdfPath);
+
+        return result.secure_url;
+    } catch (err) {
+        console.error("Error generating or uploading PDF:", err.message);
+        throw new Error("Failed to generate or upload PDF");
+    }
+}
+
+
 // Update application status and generate PDF
 router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
     const { status, adminNotes, kop1, kop2, kop3, kop4 } = req.body;
@@ -220,7 +256,6 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
 
         // Jika status disetujui, buat PDF dan unggah ke Cloudinary
         if (status === "Disetujui") {
-            const pdfPath = path.join(__dirname, `../documents/${application._id}.pdf`);
             // Baca file logo dan ubah menjadi Base64
             const logoBase64 = fs.readFileSync(path.resolve(__dirname, '../assets/logo.png')).toString('base64');
             const logoDataUrl = `data:image/png;base64,${logoBase64}`;
@@ -1014,29 +1049,13 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                 </body>
 
                 </html>`
+                
             }
+            
+// Buat dan unggah PDF
+            const pdfUrl = await generateAndUploadPDF(content, application._id);
+            application.pdfPath = pdfUrl;
 
-            // Gunakan Puppeteer untuk membuat PDF
-            const browser = await puppeteer.launch();
-            const page = await browser.newPage();
-            await page.setContent(content);
-            await page.pdf({ path: pdfPath, format: 'A4', printBackground: true });
-            await browser.close();
-
-            // Unggah ke Cloudinary
-            const result = await cloudinary.uploader.upload(pdfPath, {
-                resource_type: "raw",
-                folder: "pdf_files",
-                use_filename: true,
-                unique_filename: false,
-                access_mode: "public",
-            });
-
-            // Hapus file lokal setelah diunggah
-            fs.unlinkSync(pdfPath);
-
-            // Simpan URL PDF ke database
-            application.pdfPath = result.secure_url;
         }
 
         // Simpan perubahan di database
