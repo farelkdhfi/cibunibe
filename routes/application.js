@@ -312,7 +312,7 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                                 /* Mengurangi margin atas dan bawah */
                                 line-height: 1.2;
                                 /* Mengurangi jarak antar baris */
-                                font-size: 20px;
+                                font-size: 18px;
                             }
 
                             .teksHeader p {
@@ -516,7 +516,7 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                             /* Mengurangi margin atas dan bawah */
                             line-height: 1.2;
                             /* Mengurangi jarak antar baris */
-                            font-size: 20px;
+                            font-size: 18px;
                         }
 
                         .teksHeader p {
@@ -713,7 +713,7 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                             /* Mengurangi margin atas dan bawah */
                             line-height: 1.2;
                             /* Mengurangi jarak antar baris */
-                            font-size: 20px;
+                            font-size: 18px;
                         }
 
                         .teksHeader p {
@@ -886,7 +886,7 @@ router.put("/:id", authenticateToken, isAdmin, async (req, res) => {
                             /* Mengurangi margin atas dan bawah */
                             line-height: 1.2;
                             /* Mengurangi jarak antar baris */
-                            font-size: 20px;
+                            font-size: 18px;
                         }
 
                         .teksHeader p {
